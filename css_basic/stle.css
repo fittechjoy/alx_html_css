@@ -1,0 +1,37 @@
+/* Make body a vertical flex container */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full screen height */
+  margin: 0;
+}
+
+/* Make main a horizontal flex container */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* Let it grow and fill the available space */
+}
+
+/* article takes 2/3 of the space */
+article {
+  flex: 2;
+  overflow-y: auto; /* Enables vertical scroll if content overflows */
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* aside takes 1/3 of the space */
+aside {
+  flex: 1;
+  overflow-y: auto; /* Enables vertical scroll if content overflows */
+  padding: 10px;
+  background-color: #d0d0d0;
+}
+
+/* Optional: basic styling for header and footer */
+header, footer {
+  padding: 10px;
+  background-color: #ccc;
+  text-align: center;
+}
