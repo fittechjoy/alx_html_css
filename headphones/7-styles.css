@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Section Styles */
+.what-we-do, .our-results {
+    padding: 50px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Feature Item Animations */
+.features .feature {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.features .feature:hover {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+}
+
+/* Add bounce animation to the results */
+.results .result {
+    animation: bounceIn 1.5s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.results .result:hover {
+    transform: scale(1.1) translateY(-10px);
+    opacity: 1;
+}
+
+.pentagon {
+    width: 100px;
+    height: 100px;
+    background-color: #ff5722;
+    clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.pentagon:hover {
+    transform: rotate(45deg);
+}
+
+/* Bouncing animation for "Our Results" */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Icon Hover Effects */
+.icon {
+    font-size: 3rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .icon {
+    transform: rotate(360deg);
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .features, .results {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature, .result {
+        width: 80%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+}
